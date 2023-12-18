@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+
+        }
+
+        .row {
+            margin-bottom: 20px;
+            /* border: 1px solid red; */
+
+        }
+
+        .iteam {
+            float: left;
+            width: 100%;
+        }
+
+        .iteam2 {
+            float: left;
+            width: 50%;
+        }
+
+        .iteam3 {
+            float: left;
+            width: 33%;
+        }
+
+        .iteam4 {
+            float: left;
+            width: 25%;
+        }
+
+        .top-bar {
+            background-color: green !important;
+            color: white;
+            font-size: 22px;
+            padding: 10px;
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .right {
+            text-align: right;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            padding: 9px;
+            font-size: 20px;
+            /* display: block; */
+            /* text-align: center; */
+
+        }
+        .right .menu-bar{
+            display: none;
+        }
+        @media screen and (max-width:600px){
+            .right{
+                padding: 40px 0 0 10px;
+            }
+            .right a{
+                display: none;
+            }
+            .right .menu-bar{
+            display: block;
+            float: none;
+            position: absolute;
+            right: 0;
+            top: 80px;
+        }
+        .right.responsive a{
+            float: none;
+            display: block;
+            text-align: center;
+            
+        }
+            
+        }
+        li {
+            display: inline;
+        }
+
+        .active {
+            background-color: green;
+            color: white !important;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            color: green;
+            padding: 12px;
+
+        }
+
+        .logo {
+            height: 98px;
+            width: 194px;
+        }
+
+        h1 {
+            color: green;
+            letter-spacing: 5px;
+            text-decoration: underline;
+            margin: 20px;
+        }
+
+        #banner {
+            background-image: url('https://landtwisters.in/public/web/assets/images/background/main-bg.jpeg');
+            height: 900px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+        }
+
+        h2,
+        p,
+        label {
+
+            margin: 20px;
+            text-align: justify;
+        }
+
+        span {
+            color:chartreuse;
+        }
+
+        .img-about,
+        .img-contact {
+            height: 300px;
+            width: 100%;
+        }
+
+        h2 {
+            color: green;
+            margin: 20px;
+            font-size: 22px;
+        }
+
+        .service:hover {
+            background-color: green;
+            color: white;
+        }
+
+        .service:hover h2 {
+            color: white;
+        }
+
+        .input {
+            display: block;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+            width: 50%;
+        }
+
+        .input:hover {
+            border-color: green;
+            outline: 0;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+        }
+
+        .footer .logo {
+            display: block;
+            margin: 20px;
+        }
+
+        .footer a {
+            color: white;
+            display: block;
+        }
+
+        .footer a:hover {
+            color: greenyellow;
+        }
+
+        h4 {
+            font-size: 20px;
+            margin-left: 20px;
+
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="row top-bar">
+        <div class="iteam2"> RERA APPROVED</div>
+        <div class="iteam2 right">PH:8409501180;email:uttamkumar21899@gmail.com</div>
+    </div>
+    <div class="row ">
+        <div class="iteam2">
+            <img class="logo" src="logo.jpg" alt="">
+        </div>
+
+        <div class="iteam2 right"id="navigation">
+            <ul>
+                <li>
+
+                    <a class="active" href="">home</a>
+                <li></li>
+
+                <a href="">about us</a>
+                <li></li>
+                <a href="">features</a>
+                <li></li>
+                <a href="">services</a>
+                <li></li>
+                <a href="">our blog</a>
+                <li></li>
+                <a href="">news</a>
+                <li></li>
+                <a href="">contact</a>
+                </li>
+                <li></li>
+                <a class="menu-bar" onclick="togglemenu()" href=""><i class=" fa-solid fa-bars"></i></a>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function togglemenu(){
+            var mymenu=document.getelementbyid("navigation");
+           if(mymenu.classname=='right'){
+            mymenu.classname='right responsive';
+           } else if( mymenu.classname=='right responsive'){
+            mymenu.classname ='right';
+           }
+
+        }
+    </script>
+
+    <div class="row" id="banner"></div>
+
+    <h1>about us</h1>
+
+    <div class="row">
+        <div class="iteam2">
+            <h2> <span>about</span> our company</h2>
+            <p>At Land Twisters, our valued customers are our top priority. We take pride in delivering exceptional
+                service and helping them find their dream properties. But don't just take our word for it—our customers
+                have spoken! From first-time homebuyers to seasoned investors, our</p>
+            <p>customers appreciate our dedication to understanding their unique needs and providing personalized
+                solutions. Their testimonials serve as a testament to the trust they have in Land Twisters, making us
+                their go-to destination for all their real estate needs.
+
+                View More</p>
+        </div>
+        <div class="iteam2">
+            <img class="img-about" src="https://landtwisters.in/public/web/assets/images/about/about-page-banner.jpg"
+                alt="">
+        </div>
+
+    </div>
+
+    <h1>our services</h1>
+
+    <div class="row">
+        <div class="iteam3 service">
+            <h2>centralized database</h2>
+            <p>Efficiently managing properties with expertise and care, LandTwisters.com is your trusted partner for
+                seamless property management solutions</p>
+        </div>
+        <div class="iteam3 service">
+            <h2>absolute support</h2>
+            <p>Ensuring peace of mind through meticulous<br> verification of property papers, securing your<br>
+                investment with trust and transparency.</p>
+        </div>
+        <div class="iteam3 service">
+            <h2>centralized database</h2>
+            <p>Efficiently managing properties with expertise and care, LandTwisters.com is your trusted partner for
+                seamless property management solutions</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="iteam3 service">
+            <h2>Property Management</h2>
+            <p>Ensuring peace of mind through meticulous<br> verification of property papers, securing your<br>
+                investment with trust and transparency.</p>
+        </div>
+        <div class="iteam3 service">
+            <h2>centralized database</h2>
+            <p>Efficiently managing properties with expertise and care, LandTwisters.com is your trusted partner for
+                seamless property management solutions</p>
+        </div>
+        <div class="iteam3 service">
+            <h2>Verification of Property Papers</h2>
+            <p>Ensuring peace of mind through meticulous<br> verification of property papers, securing your<br>
+                investment with trust and transparency.</p>
+        </div>
+
+
+    </div>
+    <h1>contact us</h1>
+
+    <div class="row">
+        <div class="iteam2">
+            <form action="">
+                <label for="">enter name</label>
+                <input type="text" placeholder="uttam kumar" class="input">
+                <label for="">enter email</label>
+                <input type="email" placeholder="uttamkumar21899@gmail.com" " class=" input">
+                <label for=""> enter mobile no.</label>
+                <input type="number" placeholder="8409501180" " class=" input">
+                <label for="">enter message</label>
+                <textarea name="" id="" cols="30" rows="10" placeholder="your message" " class=" input"></textarea>
+
+            </form>
+        </div>
+        <div class="iteam2">
+            <img class="img-contact" src="https://landtwisters.in/public/web/assets/images/about/about-page-banner.jpg"
+                alt="">
+        </div>
+    </div>
+
+    <div class="row footer">
+        <div class="iteam">
+            <img class="logo" src="logo.jpg" alt="">
+        </div>
+        <div class="iteam3">
+            <h4>address</h4>
+            <p>Opposite Ansal Golf Link 2, Sector-115, Landra Kharar, Sas Nagar, Chandigarh - 160055</p>
+            <h4>contact no.</h4>
+            <p><a href="tel+(91) 9115569633 ">+(91) 9115569633</a></p>
+            <h4>Need Live Support?</h4>
+            <p><a href="mailto:info@landtwisters.com">info@landtwisters.com</a></p>
+        </div>
+        <div class="iteam3">
+            <h4>quick links <i class="fa-solid fa-link"></i></h4>
+            <ul>
+                <li><a href="#"> <i class="fa-regular fa-snowflake"> </i>link1</a></li>
+                <li><a href="#"> <i class="fa-regular fa-snowflake"> </i>link2</a></li>
+                <li><a href="#"> <i class="fa-regular fa-snowflake"> </i>link3</a></li>
+                <li><a href="#"> <i class="fa-regular fa-snowflake"> </i>link4</a></li>
+            </ul>
+
+        </div>
+        <div class="iteam3">
+            <h4>useful links <i class="fa-brands fa-linkedin"></i></h4>
+            <ul>
+                <li><a href="#"> <i class="fa-regular fa-snowflake"> </i>link1</a></li>
+                <li><a href="#"> <i class="fa-regular fa-snowflake"> </i>link2</a></li>
+                <li><a href="#"> <i class="fa-regular fa-snowflake"> </i>link3</a></li>
+                <li><a href="#"> <i class="fa-regular fa-snowflake"> </i>link4</a></li>
+            </ul>
+
+        </div>
+        <h1>create by uttam kumar</h1>
+    </div>
+
+
+</body>
+
+</html>
